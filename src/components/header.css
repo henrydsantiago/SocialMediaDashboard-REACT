@@ -1,0 +1,70 @@
+
+.header{
+    padding-top: 3em;
+    border-bottom: 50px solid var(--header-light);
+    background-color: var(--header-light);
+    padding-bottom: 20px;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+  }
+  
+  .header-total{
+    margin: 0.5em 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--header-total);
+    border-bottom: 1px solid var(--bgDarkBlue);
+    padding-bottom: 1.5em;
+  }
+
+  @media screen and (min-width: 1024px){
+    .header-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .header-total{
+        border: none;
+    }
+  }
+
+  @media (prefers-color-scheme: dark){
+    .is-light-mode{
+      --bgCard: rgb(236,240,249);
+      --titulo: hsl(228, 12%, 44%);
+      --bgDarkBlue: rgb(246, 247, 254);
+  
+      --toggle-light: hsl(230, 22%, 74%);
+      --toggle-light2: hsl(230, 22%, 74%);
+      --togle-dark1: hsl(210, 78%, 56%);
+      --togle-dark2: hsl(146, 68%, 55%);
+  
+      --header-light: rgb(246, 247, 254);
+      --base: white;
+      --text-base: black;
+      --header-total: hsl(228, 12%, 44%);
+      --card-active: hsl(230, 22%, 74%);
+      --DesaturatedBlue: hsl(228, 34%, 66%);
+      --darkDesaturatedBlue: rgb(236,240,249);
+    }
+    .header{
+        background-color: var(--bgDarkBlue);
+        border-color: var(--bgDarkBlue);
+        color: var(--text-base);
+    }
+
+    .header-total{
+      color: var(--DesaturatedBlue);
+    }
+
+    .header-total{
+        border-color: var(--DesaturatedBlue);
+    }
+    
+  }
+  
+  
+  
+
+
+  
+  

@@ -1,0 +1,92 @@
+  
+  .dark-mode{
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--titulo);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .checkbox{
+    display: none;
+  }
+  
+  #checkbox:checked ~ .switch::before{
+    transform:translate(0);
+    -webkit-transform:translate(0);
+    -moz-transform:translate(0);
+    -ms-transform:translate(0);
+    -o-transform:translate(0);
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+  }
+  
+  .switch{
+    display: block;
+    width: 50px;
+    height: 24px;
+    background-image: linear-gradient(to right, var(--toggle-light), var(--toggle-light2));
+    box-sizing: border-box;
+    padding: 3px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
+  .switch::before{
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: var(--white);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transform:translate(25px);
+    -webkit-transform:translate(25px);
+    -moz-transform:translate(25px);
+    -ms-transform:translate(25px);
+    -o-transform:translate(25px);
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    /* will-change: transform; */
+  }
+
+  @media screen and (min-width: 480px){
+
+    .dark-mode{
+        justify-content: flex-end;
+    }
+    .dark-mode-title{
+        margin-right: 10px;
+    }
+  
+  }
+
+  @media (prefers-color-scheme: dark){
+  
+    .dark-mode{
+        color: var(--DesaturatedBlue);
+    }
+  
+    .switch{
+        background-image: linear-gradient(to right, var(--Toggle1), var(--Toggle2));
+    }
+    .switch::before{
+        background-color: var(--bgDarkBlue);
+    }
+    
+  }

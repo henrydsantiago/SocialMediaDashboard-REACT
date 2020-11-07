@@ -1,0 +1,137 @@
+body{
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+main{
+  background-color: var(--base);
+  color: var(--text-base);
+}
+
+h1{
+  margin:0;
+}
+:root{
+  --porcentaje-up: hsl(163, 72%, 41%);
+  --porcentaje-down: rgb(220, 65, 76);
+
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram1: hsl(37, 97%, 70%);
+  --instagram2:  hsl(329, 70%, 58%);
+  --youTube: hsl(348, 97%, 39%);
+
+  --white: hsl(0, 0%, 100%);
+  --lightGrayishBlue: hsl(227, 47%, 96%);
+  --bgCard: rgb(236,240,249);
+  --titulo: hsl(228, 12%, 44%);
+  --bgDarkBlue: hsl(230, 17%, 14%);
+
+  --toggle-light: hsl(230, 22%, 74%);
+  --toggle-light2: hsl(230, 22%, 74%);
+  --togle-dark1: hsl(210, 78%, 56%);
+  --togle-dark2: hsl(146, 68%, 55%);
+
+  --header-light: rgb(246, 247, 254);
+  --base: white;
+  --text-base: black;
+  --header-total: hsl(228, 12%, 44%);
+  --card-active: hsl(230, 22%, 74%);
+}
+.wraper{
+  padding: 0 20px;
+}
+
+.grid{
+  display: grid;
+  grid-row-gap: 22px;
+}
+
+@media screen and (min-width: 480px){
+
+  .dark-mode{
+      justify-content: flex-end;
+  }
+  .dark-mode-title{
+      margin-right: 10px;
+  }
+
+  .grid, .grid-overview{
+      /* border: 1px solid purple; */
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2em;
+  }
+  .wraper{
+      max-width: 1440px;
+      margin: auto;
+  }
+
+}
+
+@media screen and (min-width: 768px){
+  .grid, .grid-overview{
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .grid, .grid-overview{
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.is-dark-mode{
+  --bgCard: hsl(228, 28%, 20%);
+  --titulo: hsl(228, 34%, 66%);
+  --header-total: hsl(228, 34%, 66%);
+  --bgDarkBlue: hsl(230, 17%, 14%);
+  --text-base: white;
+  --toggle-light: hsl(210, 78%, 56%);
+  --toggle-light2: hsl(146, 68%, 55%);
+  --header-light: hsl(230, 17%, 14%);
+  --base: hsl(230, 17%, 14%);
+  --card-active: hsl(230, 17%, 26%);
+}
+
+.is-light-mode{
+  --bgCard: rgb(236,240,249);
+  --titulo: hsl(228, 12%, 44%);
+  --bgDarkBlue: hsl(230, 17%, 14%);
+
+  --toggle-light: hsl(230, 22%, 74%);
+  --Toggle1: hsl(230, 22%, 74%);
+  --Toggle2: hsl(230, 22%, 74%);
+  --toggle-light2: hsl(230, 22%, 74%);
+  --togle-dark1: hsl(210, 78%, 56%);
+  --togle-dark2: hsl(146, 68%, 55%);
+
+  --header-light: rgb(246, 247, 254);
+  --base: white;
+  --text-base: black;
+  --header-total: hsl(228, 12%, 44%);
+  --card-active: hsl(230, 22%, 74%);
+  --DesaturatedBlue: hsl(228, 34%, 66%);
+  --darkDesaturatedBlue: hsl(228, 28%, 20%);
+}
+
+/* Dark Mode */
+
+@media (prefers-color-scheme: dark){
+  :root{
+      --bgDarkBlue: hsl(230, 17%, 14%); /* bg */
+      --bgDarkBlue: hsl(232, 19%, 15%); /* top bg pattern */
+      --darkDesaturatedBlue: hsl(228, 28%, 20%);/* card bg */
+      --DesaturatedBlue: hsl(228, 34%, 66%);/* text */
+      --White: hsl(0, 0%, 100%); /* text */
+      --Toggle1: hsl(210, 78%, 56%); /* Dark Mode */
+      --Toggle2: hsl(146, 68%, 55%); /* Dark Mode */
+  }
+  
+  body{
+    background-color: var(--bgDarkBlue);
+    border-color: var(--bgDarkBlue);
+    color: var(--text-base);
+  }
+}
+
